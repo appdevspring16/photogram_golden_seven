@@ -36,8 +36,9 @@ class PhotosController < ApplicationController
     p = Photo.find_by({ :id => params[:id] })
     p.caption = params[:the_caption]
     p.source = params[:the_source]
+    p.id = params[:id]
     p.save
 
-    redirect_to("/photos/:id")
+    redirect_to("/photos/#{p.id}")
   end
 end
