@@ -1,0 +1,12 @@
+<h1>Edit Photo</h1>
+
+<form class="" action="http://localhost:3000/update_photo/<%= @photo.id%>" method="post">
+
+  <label for="caption">Caption:</label>
+  <input id="caption" type="text" name="caption" value="<%= @photo.caption%>">
+
+  <label for="source">Source:</label>
+  <input id="caption" type="text" name="source" value="<%= @photo.source%>">
+
+  <button type="button" name="button"><a href="/photos">Edit Photo</a></button>
+</form>
