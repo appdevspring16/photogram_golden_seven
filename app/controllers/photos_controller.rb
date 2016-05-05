@@ -18,8 +18,17 @@ class PhotosController < ApplicationController
 		p.save
 
 		redirect_to("http://localhost:3000/photos")
+	end
 
+	def edit_form
+		
 
+	end
+
+	def destroy 
+		d = Photo.find(params[:id])
+		d.destroy
+		redirect_to("http://localhost:3000/photos")
 	end
 
 
