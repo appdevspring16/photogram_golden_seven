@@ -34,6 +34,14 @@ photo_info = [
   {
     :source => "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/1280px-Biandintz_eta_zaldiak_-_modified2.jpg",
     :caption => "Biandintz"
+  },
+  {
+    :source => "https://static-secure.guim.co.uk/sys-images/Arts/Arts_/Pictures/2009/3/18/1237375559629/The-Wires-Omar-Little-pla-001.jpg",
+    :caption => "Omar"
+  },
+  {
+    :source => "http://ichef-1.bbci.co.uk/news/624/media/images/73797000/jpg/_73797009_stellar_tsang.img_3156x624.jpg",
+    :caption => "Sloth Bowl"
   }
 ]
 
