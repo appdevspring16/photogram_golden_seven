@@ -29,7 +29,7 @@ class PhotosController < ApplicationController
   end
 
   def edit_form
-    @photo=Photo.find_by({:id=>params[:id]})
+    @photo=Photo.find_by({ :id=> params[:id] })
   end
 
   def update_row
@@ -39,6 +39,6 @@ class PhotosController < ApplicationController
     p.save
 
     # render("create_row.html.erb")
-    redirect_to("http://localhost:3000/photos/"+@photos.id.to_s)
+    redirect_to("http://localhost:3000/photos/")
   end
 end
