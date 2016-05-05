@@ -1,0 +1,10 @@
+<h1>Photo Details</h1>
+
+<!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Lake_Bondhus_Norway_2862.jpg/1280px-Lake_Bondhus_Norway_2862.jpg" width= "480" alt="" /> -->
+<img src="<%= @photo_source %>" width= "480" alt="" />
+
+<!-- <p>Lake Bondhus</p> -->
+<p><%= @photo_caption %></p>
+<a href="http://localhost:3000/photos">Back</a>
+<a href="http://localhost:3000/photos/<%= @photo_id %>/edit">Edit</a>
+<a href="http://localhost:3000/delete_photo/<%= @photo_id %>">Delete</a>
