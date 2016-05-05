@@ -38,7 +38,7 @@ class PhotosController < ApplicationController
     p.source = params[:the_source]
     p.save
 
-    # render("create_row.html.erb")
-    redirect_to("http://localhost:3000/photos/")
+    # render("update_row.html.erb")
+    redirect_to("http://localhost:3000/photos/#{@photo.id}")
   end
 end
