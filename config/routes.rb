@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 # Routes to CREATE photos
   get("/photos/new",       { :controller => "photos", :action => "new_form" })
-  get("/create_photo",       { :controller => "photos", :action => "create_row" })
+  get("/photos/create_photo", { :controller => "photos", :action => "create_row" })
 
   get("/delete_photo/:id", { :controller => "photos", :action => "destroy" })
 
