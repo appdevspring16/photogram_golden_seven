@@ -15,7 +15,16 @@ class PhotosController < ApplicationController
     p.caption = params[:the_caption]
     p.source = params[:the_source]
     p.save
-    
+
+    redirect_to("/photos/")
+  end
+
+  def destroy
+
+    d = Photo.find(params[:id])
+    d.destroy
+
+
     redirect_to("/photos/")
   end
 
