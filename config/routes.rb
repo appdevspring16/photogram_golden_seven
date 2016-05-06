@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   # Routes to EDIT
   get("/photos/:id/edit", { :controller => "photos", :action => "edit_form" })
   get("/update_photo/:id", { :controller => "photos", :action => "update_row" })
- 
+
 
 end
