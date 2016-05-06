@@ -29,8 +29,8 @@ class PhotosController < ApplicationController
     @photo_source = p.source
     @photo_caption = p.caption
     @photo_id = p.id
-
   end
+
   def update_row
     p = Photo.find_by({ :id => params[:id]})
     p.caption = params[:the_caption]
