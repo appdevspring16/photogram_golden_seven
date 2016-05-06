@@ -17,13 +17,13 @@ class PhotosController < ApplicationController
     p.source = params[:the_source]
     p.save
 
-    redirect_to("http://localhost:3000/photos")
+    redirect_to("/photos")
   end
 
   def destroy
     x = Photo.find_by({ :id => params[:id]})
     x.destroy
-    redirect_to("http://localhost:3000/photos")
+    redirect_to("/photos")
   end
 
   def edit_form
@@ -35,6 +35,6 @@ class PhotosController < ApplicationController
     y.caption = params[:the_caption]
     y.source = params[:the_source]
     y.save
-    redirect_to("http://localhost:3000/photos/" + params[:id].to_s)
+    redirect_to("/photos/" + params[:id].to_s)
   end
 end
