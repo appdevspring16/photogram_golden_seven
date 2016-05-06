@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    p = Photo.find_by({ :id => params[:id] })
+  p = Photo.find_by({ :id => params[:id] })
     @photo_source = p.source
     @photo_caption = p.caption
     @photo_id = p.id
@@ -23,17 +23,29 @@ class PhotosController < ApplicationController
     redirect_to("http://localhost:3000/photos")
   end
 
-def delete
+  def delete
     d = Photo.find_by({ :id => params[:id] })
     d.destroy
 
-redirect_to("http://localhost:3000/photos")
-end
-def edit_form
-  e = Photo.find_by({ :id => params[:id] })
-  @photo_source_e = e.source
-  @photo_caption_e = e.caption
-  @photo_id_e = e.id
-end
+    redirect_to("http://localhost:3000/photos")
+  end
+  def edit_form
+    @photo = Photo.find_by({ :id => params[:id] })
+  end
+
+  def update_row
+    p = Photo.find_by({ :id => params[:id]})
+    p.caption = params[:the_caption]
+    p.source = params[:the_source]
+    p.save
+
+
+#need to figure this bottom part out
+@photo = Photo.find_by({ :id => params[:id]})
+    redirect_to("http://localhost:3000/photos/"+@photo.id.to_s)
+
+
+  end
+
 
 end
