@@ -15,17 +15,26 @@ class PhotosController < ApplicationController
     p.caption = params[:the_caption]
     p.source = params[:the_source]
     p.save
-
     redirect_to("/photos/")
   end
 
   def destroy
-
     d = Photo.find(params[:id])
     d.destroy
-
-
     redirect_to("/photos/")
   end
+
+  def edit_form
+    @photo = Photo.find_by({:id => params[:id]})
+  end
+
+  def update_row
+    photo = Photo.find(params[:id])
+    photo.caption = params[:the_caption]
+    photo.source = params[:the_source]
+    photo.save
+   redirect_to("/photos/#{params[:id]}")
+  end
+
 
 end
