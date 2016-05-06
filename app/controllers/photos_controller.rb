@@ -4,12 +4,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @id = params[:id]
-    @url = Photo.find(@id).source
-    @caption = Photo.find(@id).caption
-
-    render("show.html.erb")
-
+    @image = Photo.find(params[:id])
   end
 
   def new_form
@@ -48,12 +43,11 @@ render("edit_form.html.erb")
 end
 
 def edit_row
-@change_id=params[:id]
-i = Photo.find(@change_id)
-i.source = params[:edit_url]
-i.caption=params[:edit_caption]
-i.save
-redirect_to("http://localhost:3000/photos")
+@image=Photo.find(params[:id])
+@image.source = params[:edit_url]
+@image.caption=params[:edit_caption]
+@image.save
+render("show")
 end
 
 end
