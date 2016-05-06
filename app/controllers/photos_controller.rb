@@ -25,8 +25,6 @@ class PhotosController < ApplicationController
 
   def edit_photo
     @edit = Photo.find_by({ :id => params[:id]})
-    @edit_caption = @edit.caption
-    @edit_source = @edit.source
 
   end
 
@@ -36,7 +34,7 @@ class PhotosController < ApplicationController
     edit.source = params[:the_source]
     edit.save
 
-    redirect_to("http://localhost:3000/photos")
+    redirect_to("http://localhost:3000/photos/#{edit.id}")
   end
 
   def delete_photo
