@@ -31,7 +31,11 @@ class PhotosController < ApplicationController
   end
 
   def edit_row
-
+    f = Photo.find_by({:id => params[:id]})
+    f.caption = params[:the_caption]
+    f.source = params[:the_source]
+    f.save
+    redirect_to("/photos")
   end
 
 end
