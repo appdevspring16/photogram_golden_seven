@@ -37,7 +37,8 @@ class PhotosController < ApplicationController
     p.source = params[:the_source]
     p.save
 
-    redirect_to("http://localhost:3000/photos/")
+    # @photo_to_edit = Photo.find_by({ :id => params[:id] })
+    redirect_to(("http://localhost:3000/photos/".to_s) + (p.id.to_s))
 
   end
 end
