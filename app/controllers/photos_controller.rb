@@ -21,9 +21,24 @@ class PhotosController < ApplicationController
 	end
 
 	def edit_form
+		editphoto = Photo.find_by({:id => params[:id]})
+		editphoto.caption = params[:the_caption]
+		editphoto.source = params[:the_source]
+		
+		@editphoto = editphoto.caption
 		
 
 	end
+
+	def update_row
+		
+
+		redirect_to("http://localhost:3000/photos")
+
+	end
+
+
+
 
 	def destroy 
 		d = Photo.find(params[:id])

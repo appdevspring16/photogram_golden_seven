@@ -1,11 +1,12 @@
 <h1>Photo Details</h1>
 
-<form action="http://localhost:3000//photos/:id/edit">
-	<label> Caption</label>
-	<input type="text" name="the_caption">
+<form action="http://localhost:3000/update_photo/:id">
+	<label value="<%= @editphoto %>"> Caption</label>
+	<input type="text" name="the_caption" >
+
 
 	<label> Image URL</label>
-	<input type="text" name="the_source" value="<%= params[:the_caption] %>">
+	<input type="text" name="the_source">
 
 	<button>Update Photo</button>
 </form>
