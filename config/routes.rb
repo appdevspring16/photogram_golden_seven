@@ -10,11 +10,13 @@ Rails.application.routes.draw do
   get("/photos",           { :controller => "photos", :action => "index" })
   get("/photos/:id",       { :controller => "photos", :action => "show" })
   # Routes to DELETE photos
-  get("/delete_photo/:id",        { :controller => "photos", :action => "destroy" })
+  get("/delete_photo/:id",  { :controller => "photos", :action => "destroy" })
   # Routes to EDIT photos
-  get("/photos/:id/edit", { :controller => "photos", :action => "edit_form" })
-  # Routes to UPDATE photos
+
   get("/update_photo/:id", { :controller => "photos", :action => "update_row" })
+
+  get("/photos/:id/edit", { :controller => "photos", :action => "edit" })
+
 
 
 end
