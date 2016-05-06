@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get("/delete_photo/:id", { :controller => "photos", :action => "destroy" })
 
   get("/photos/:id/edit", { :controller => "photos", :action => "edit_form" })
-  get("/photos/:id/edit/update_photo", { :controller => "photos", :action => "update_photo" })
+  get("/photos/:id/update_photo", { :controller => "photos", :action => "update_photo" })
   # Routes to READ photos
   get("/photos",           { :controller => "photos", :action => "index" })
   get("/photos/:id",       { :controller => "photos", :action => "show" })
