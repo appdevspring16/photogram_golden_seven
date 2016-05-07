@@ -1,0 +1,8 @@
+<h1>Photo Details</h1>
+<% i = @list_of_photos.find_by({ :id => params[:id] }) %>
+  <img src="<%= i.source %>" width="720">
+  <p><h2><%= i.caption %> </h2></p>
+
+  <a href="http://localhost:3000">Back</a>
+  <a href="http://localhost:3000/photos/<%= i.id %>/edit">Edit</a>
+  <a href="http://localhost:3000/delete_photo/<%= i.id %>">Delete</a>
