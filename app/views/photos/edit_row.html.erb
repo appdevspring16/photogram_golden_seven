@@ -1,0 +1,26 @@
+<h1>Edit photo</h1>
+
+<!-- # <% p = Photo.find_by({ :id => params[:id] }) %> -->
+<!-- # <%caption = p.caption%> -->
+
+<form action="http://localhost:3000/editsave">
+  <!-- calls back to routs.db and takes us to create_row -->
+
+  <div class="">
+
+
+    <label>Caption:</label>
+    <input type="text" name="the_caption" value="<%= p.caption %>">
+  </div>
+  <div class="">
+
+  </div>
+  <label>Image URL:</label>
+  <input type="text" name="the_source" value="<%= p.source %>">
+</div>
+<div class="">
+
+
+  <button>Update Photo</button>
+</div>
+</form>
