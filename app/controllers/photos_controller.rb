@@ -40,7 +40,7 @@ class PhotosController < ApplicationController
 
   def delete_photo
     p = Photo.find_by({ :id => params[:id]})
-    p.delete
+    p.destroy
 
     redirect_to("http://localhost:3000/photos")
   end
