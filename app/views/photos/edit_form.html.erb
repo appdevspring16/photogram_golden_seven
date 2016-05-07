@@ -1,0 +1,17 @@
+<h1>Add A New Phto</h1>
+
+<form action="http://localhost:3000/update_photo/<%= @photo.id%>">
+  <label>
+    Caption
+  </label>
+  <input type="text" name="the_caption" value="<%=@photo.caption%>">
+
+  <label>
+    Source
+  </label>
+  <input type="text" name="the_source" value="<%=@photo.source%>">
+
+  <button>Update Photo</button>
+
+
+</form>
