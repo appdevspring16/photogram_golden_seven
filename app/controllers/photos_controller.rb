@@ -18,4 +18,10 @@ class PhotosController < ApplicationController
     redirect_to("http://localhost:3000")
   end
 
+  def destroy
+    @photo = Photo.find_by ({ :id => params[:id]})
+    @photo.destroy
+    redirect_to("http://localhost:3000")
+  end
+
 end
