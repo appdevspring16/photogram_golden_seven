@@ -32,8 +32,8 @@ class PhotosController < ApplicationController
   end
 
   def edit_row
-    p = Photo.find_by({ :id => params[:id] })
-    @photo_id = p.id
+    @p = Photo.find_by({ :id => params[:id] })
+    # @photo_id = @p.id
     # p.caption = params[:the_caption]
     # p.source = params[:the_source]
   end
@@ -43,10 +43,11 @@ class PhotosController < ApplicationController
     p.caption = params[:the_caption]
     p.source = params[:the_source]
     p.save
+    pid=p.id
 
-    redirect_to("http://localhost:3000/photos")
-    # redirect_to("http://localhost:3000/photos/"+"params[:id]")
-
+    # redirect_to("http://localhost:3000/photos")
+    redirect_to("http://localhost:3000/photos/"+pid.to_s)
+# redirect_to("http://localhost:3000/photos/"+"params[:id]")
   end
 
 end
