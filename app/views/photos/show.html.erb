@@ -2,3 +2,13 @@
 <img src="<%= @selected.source %>" width = "720">
 <br>
       <%= @selected.caption %>
+      <br>
+      <td>
+        <a href="http://localhost:3000/photos">Back</a>
+      </td>
+      <td>
+        <a href="http://localhost:3000/photos/<%= @selected.id %>/edit">Edit</a>
+      </td>
+      <td>
+        <a href="http://localhost:3000/delete_photo/<%= @selected.id %>">Delete</a>
+      </td>
