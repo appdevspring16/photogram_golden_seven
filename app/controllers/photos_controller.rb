@@ -5,7 +5,7 @@ class PhotosController < ApplicationController
 
 
   def new_form
-    # no actuall processing
+    # no actual processing
   end
 
   def create_row
@@ -14,6 +14,24 @@ class PhotosController < ApplicationController
     p.caption = params[:the_caption]
     p.caption = params[:the_source]
     p.save
+
+    # render("create_row.html.erb")
+    redirect_to("http://localhost:3000/photos")
+
+  end
+
+  def edit_form
+
+    p = Photo.find(params[:id])
+
+  end
+
+  def update_row
+    p =Photo.find(params[:id])
+    p.caption = params[:the_caption]
+    p.caption = params[:the_source]
+    p.save
+    
 
   end
 
@@ -46,7 +64,10 @@ class PhotosController < ApplicationController
 
 
 
-
+  def destroy
+    @photo = Photo.find_by({:id=>params[:id]})
+    @photo.destroy
+  end
 
 
 
