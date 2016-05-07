@@ -31,11 +31,21 @@ class PhotosController < ApplicationController
     redirect_to("http://localhost:3000/photos")
   end
 
+  def edit_row
+    p = Photo.find_by({ :id => params[:id] })
+    # p.caption = params[:the_caption]
+    # p.source = params[:the_source]
+  end
 
-def edit_form
+  def save_edit
+    p = Photo.find_by({ :id => params[:id] })
+    p.caption = params[:the_caption]
+    p.source = params[:the_source]
+    p.save
 
+    redirect_to("http://localhost:3000/photos")
+    # redirect_to("http://localhost:3000/photos/"+"params[:id]")
 
-redirect_to("http://localhost:3000/photos/params[id]")
-end
+  end
 
 end
