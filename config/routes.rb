@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # Edit
   get("/photos/:id/edit",       { :controller => "photos", :action => "edit_row" })
+  get("/editsave/:id",       { :controller => "photos", :action => "save_edit" })
   get("/editsave",       { :controller => "photos", :action => "save_edit" })
-
 
 end
