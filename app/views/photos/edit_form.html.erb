@@ -2,13 +2,13 @@
 
 <form action="/update_photo/<%= @photo.id %>">
   <div>
-    <label>Caption:</label>
-    <input type="text" name="the_caption" value="<%= @photo.caption %>">
+    <label for="caption">Caption:</label>
+    <input id="caption" type="text" name="the_caption" value="<%= @photo.caption %>">
   </div>
 
   <div>
-    <label>Image URL:</label>
-    <input type="text" name="the_source" value="<%= @photo.source %>">
+    <label for="image_url">Image URL:</label>
+    <input id="image_url" type="text" name="the_source" value="<%= @photo.source %>">
   </div>
 
   <div>
