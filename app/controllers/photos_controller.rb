@@ -33,6 +33,7 @@ class PhotosController < ApplicationController
 
   def edit_row
     p = Photo.find_by({ :id => params[:id] })
+    @photo_id = p.id
     # p.caption = params[:the_caption]
     # p.source = params[:the_source]
   end

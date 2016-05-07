@@ -3,7 +3,8 @@
 <!-- # <% p = Photo.find_by({ :id => params[:id] }) %> -->
 <!-- # <%caption = p.caption%> -->
 
-<form action="http://localhost:3000/editsave">
+<form action="http://localhost:3000/edit/<%= @photo_id %>">
+  <!-- <form action="http://localhost:3000/edit/<= @photo_id %>"> -->
   <!-- calls back to routs.db and takes us to create_row -->
 
   <div class="">
