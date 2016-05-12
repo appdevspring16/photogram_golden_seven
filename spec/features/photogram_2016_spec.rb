@@ -1,7 +1,7 @@
 require "rails_helper"
 
 # / && /PHOTOS
-feature "Home page (same as /photos)" do
+feature "Home page (same as /photos)", js: true do
   scenario "Home page has an h1 tag with text 'List of Photos' (should always pass since initial repo takes care of this)", points: 1 do
     visit "/"
     expect(page).to have_selector("h1", text: "List of Photos")
