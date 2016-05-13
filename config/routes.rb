@@ -6,13 +6,19 @@ Rails.application.routes.draw do
   get("/photos/new",          { :controller => "photos", :action => "new_form" })
   get("/create_photo", { :controller => "photos", :action => "create_row" })
 
+
+# Route to edit a photo
+  get("/photos/:id/edit", { :controller => "photos", :action => "edit_form" })
+
+
   # Routes to READ photos
   get("/photos",           { :controller => "photos", :action => "index" })
   get("/photos/:id",       { :controller => "photos", :action => "show" })
 
 
-# Route to delete photo
+# Route to Delete photo
   get("/delete_photo/:id", { :controller => "photos", :action => "destroy" })
+
 
 
 end

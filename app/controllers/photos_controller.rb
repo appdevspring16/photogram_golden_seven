@@ -31,4 +31,10 @@ class PhotosController < ApplicationController
 
   end
 
+  def edit_form
+   @photo = Photo.find_by ({ :id => params[:id]})
+
+  end
+
+
 end
