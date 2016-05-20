@@ -1,13 +1,13 @@
 <h1>Edit photo</h1>
 <form action="http://localhost:3000/update_photo/<%= @photo_to_edit.id%>">
-  <label>Caption:</label>
-  <input type="text" name="the_caption" value="<%= @photo_to_edit.caption %>">
+  <label for="the_caption">Caption:</label>
+  <input id="the_caption" type="text" name="the_caption" value="<%= @photo_to_edit.caption %>">
 
   <div>
   <!-- </div> -->
 
-  <label>Image URL:</label>
-  <input type="text" name="the_source" value="<%= @photo_to_edit.source %>">
+  <label for="the_source">Image URL:</label>
+  <input id="the_source" type="text" name="the_source" value="<%= @photo_to_edit.source %>">
 
   <div>
   <!-- </div> -->
