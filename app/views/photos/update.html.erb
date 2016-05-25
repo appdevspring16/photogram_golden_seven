@@ -1,0 +1,19 @@
+<h1>Hi!</h1>
+<img src="<%= @photo.source %>" height="600 px" width="700 px" />
+<p>
+  Current Caption: <%= @photo.caption %>
+</p>
+<form action="/photos/update_row/<%=@photo.id%>">
+<p>
+  <label for="source" class="control-label">New URL:</label>
+<input type="text" id="source" name="source" placeholder="URL" class="form-control" value="<%=@photo.source%>">
+</p>
+<p>
+  <label>New Caption:</label>
+  <input type="text" id="caption" name="caption" placeholder="Caption" class="form-control" value="<%=@photo.caption%>">
+</p>
+<button>Update!</button>
+</form>
+<p>
+<a href="/photos">Back</a>
+</p>

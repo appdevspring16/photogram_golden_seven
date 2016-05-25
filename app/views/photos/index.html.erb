@@ -17,13 +17,13 @@
       <%= photo.caption %>
     </td>
     <td>
-      <a href="http://localhost:3000/photos/<%= photo.id %>">Show</a>
+      <a href="http://localhost:3000/photos/show/<%= photo.id %>">Show</a>
     </td>
     <td>
-      <a href="http://localhost:3000/photos/<%= photo.id %>/edit">Edit</a>
+      <a href="http://localhost:3000/photos/update/<%= photo.id %>">Edit</a>
     </td>
     <td>
-      <a href="http://localhost:3000/delete_photo/<%= photo.id %>">Delete</a>
+      <a href="http://localhost:3000/photos/delete/<%= photo.id %>">Delete</a>
     </td>
   </tr>
   <% end %>
