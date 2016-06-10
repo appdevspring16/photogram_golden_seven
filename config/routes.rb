@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   # Update
   get("/photos/:id/edit",{:controller=>"photos", :action=> "edit"})
-  get("update_row/:id/",{:controller=>"photos", :action=> "update_row"})
+  get("update_photo/:id/",{:controller=>"photos", :action=> "update_photo"})
 
 
   #Delete
