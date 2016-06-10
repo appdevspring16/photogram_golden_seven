@@ -20,9 +20,9 @@ class PhotosController < ApplicationController
 
   end
 
-  def edit_form
+  def edit
 
-    p = Photo.find(params[:id])
+    @photo = Photo.find(params[:id])
 
   end
 
@@ -31,7 +31,8 @@ class PhotosController < ApplicationController
     p.caption = params[:the_caption]
     p.caption = params[:the_source]
     p.save
-    
+
+    redirect_to ("photos")
 
   end
 
@@ -67,6 +68,7 @@ class PhotosController < ApplicationController
   def destroy
     @photo = Photo.find_by({:id=>params[:id]})
     @photo.destroy
+    redirect_to "/"
   end
 
 

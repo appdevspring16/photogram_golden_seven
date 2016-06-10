@@ -1,0 +1,10 @@
+<h1>Edit Photo # <%= @photo_id %></h1>
+
+<form action="/update_row/<%= @photo_id %>">
+  <label for="">caption:</label>
+  <input type="text" name="the_caption" value="<%= @photo_caption %>">
+
+  <label for="">source:</label>
+  <input type="text" name="the_source" value="<%= @photo_source %>">
+  <button>Update</button>
+</form>
